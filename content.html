@@ -9,30 +9,37 @@
 <body>
     <button class="boutonsh" onclick="window.location.href='index.html'">HOME</button>
 
-    <div class="cards-wrapper">
-        <main class="card">
-            <div class="badge">Jeu mobile uniquement pour android™</div>
-            <h1>Télécharge mon jeux Ultra Mini-Golf</h1>
-            <p>Installe la dernière version du jeu et reçois une notification automatique si une nouvelle mise à jour est disponible.</p>
+<div class="cards-wrapper">
+    <main class="card">
+        <div class="badge">Jeu mobile uniquement pour android™</div>
+        <h1>Télécharge mon jeu Ultra Mini-Golf</h1>
+        <p>Installe la dernière version du jeu et reçois une notification automatique si une nouvelle mise à jour est disponible.</p>
 
-            <div class="version-block">
-                <span id="versionLabel">Version actuelle : 1.0.0</span>
-            </div>
+        <div class="version-block">
+            <span id="versionLabel">Version actuelle : 1.0.0</span>
+        </div>
 
-            <a id="downloadBtn" class="download-btn" href="https://drive.google.com/uc?export=download&id=17fK3Uu0m1QSxRco5zeGXWhJeFGQU3Ovm
-" rel="noopener noreferrer">
-                Télécharger l'APK
+        <!-- BOUTON DE TÉLÉCHARGEMENT CORRIGÉ -->
+        <a id="downloadBtn" class="download-btn"
+           href="https://drive.google.com/uc?export=download&id=17fK3Uu0m1QSxRco5zeGXWhJeFGQU3Ovm"
+           rel="noopener noreferrer">
+            Télécharger l'APK
+        </a>
+
+        <div id="updatePanel" class="update-panel hidden" role="alert">
+            <h2>Nouvelle mise à jour disponible</h2>
+            <p id="updateMessage">Une nouvelle version du jeu est disponible. Télécharge-la pour obtenir les derniers correctifs et contenu.</p>
+
+            <!-- BOUTON DE MISE À JOUR CORRIGÉ -->
+            <a id="updateLink" class="download-btn secondary"
+               href="https://drive.google.com/uc?export=download&id=17fK3Uu0m1QSxRco5zeGXWhJeFGQU3Ovm"
+               target="_blank" rel="noopener noreferrer">
+                Mettre à jour maintenant
             </a>
+        </div>
+    </main>
+</div>
 
-            <div id="updatePanel" class="update-panel hidden" role="alert">
-                <h2>Nouvelle mise à jour disponible</h2>
-                <p id="updateMessage">Une nouvelle version du jeu est disponible. Télécharge-la pour obtenir les derniers correctifs et contenu.</p>
-                <a id="updateLink" class="download-btn secondary" href="https://drive.google.com/uc?export=download&id=17fK3Uu0m1QSxRco5zeGXWhJeFGQU3Ovm
-" target="_blank" rel="noopener noreferrer">
-                    Mettre à jour maintenant
-                </a>
-            </div>
-        </main>
 
         <section class="card secondary-card">
             <div class="badge badge-alt">Fichier complet disponible</div>
