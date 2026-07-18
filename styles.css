@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #f8fafc;
+    min-height: 100vh;
+}
+
+.header1 {
+    padding: 24px 20px 10px;
+    text-align: center;
+}
+
+.menu {
+    width: 220px;
+    height: auto;
+    margin-bottom: 16px;
+}
+
+.boutons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.boutons button,
+.hero-actions button {
+    border: none;
+    border-radius: 999px;
+    padding: 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boutons button:hover,
+.hero-actions button:hover {
+    transform: translateY(-2px);
+}
+
+.boutons button {
+    background-color: #b5e3f8;
+    color: #082f49;
+    min-width: 170px;
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 24px auto 0;
+    padding: 0 20px 40px;
+}
+
+.hero-text,
+.hero-card {
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.8rem;
+    color: #7dd3fc;
+    margin-bottom: 8px;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin: 0 0 12px;
+}
+
+.hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.primary {
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: white;
+}
+
+.secondary {
+    background: #f8fafc;
+    color: #0f172a;
+}
+
+.hero-card h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+
+.hero-card ul {
+    padding-left: 18px;
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.youtube-line {
+    margin-top: 16px;
+    color: #f8fafc;
+}
+
+.youtube-link {
+    color: #7dd3fc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.preview-section {
+    max-width: 1100px;
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.preview-card {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 24px;
+    align-items: center;
+    background: rgba(15, 23, 42, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 24px;
+    padding: 24px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+.preview-screen {
+    position: relative;
+    min-height: 220px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #0f766e, #0f172a);
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.preview-lane {
+    position: absolute;
+    inset: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+}
+
+.preview-hole {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #facc15;
+    bottom: 24px;
+    right: 24px;
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.45);
+}
+
+.preview-ball {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    left: 48px;
+    top: 44px;
+    box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.15);
+}
+
+.preview-flag {
+    position: absolute;
+    width: 4px;
+    height: 70px;
+    background: #f8fafc;
+    top: 32px;
+    right: 78px;
+}
+
+.preview-flag::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    border-left: 28px solid #fb923c;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+}
+
+.preview-content h2 {
+    margin: 4px 0 8px;
+    font-size: 1.5rem;
+}
+
+.preview-content p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.preview-link {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 12px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(135deg, #38bdf8, #2563eb);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .preview-card {
+        grid-template-columns: 1fr;
+    }
+}
+

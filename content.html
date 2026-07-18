@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <link rel="stylesheet" href="stylescontent.css">
+</head>
+<body>
+    <button class="boutonsh" onclick="window.location.href='index.html'">HOME</button>
+
+    <div class="cards-wrapper">
+        <main class="card">
+            <div class="badge">Jeu mobile uniquement pour android™</div>
+            <h1>Télécharge mon jeux Ultra Mini-Golf</h1>
+            <p>Installe la dernière version du jeu et reçois une notification automatique si une nouvelle mise à jour est disponible.</p>
+
+            <div class="version-block">
+                <span id="versionLabel">Version actuelle : 1.0.0</span>
+            </div>
+
+            <a id="downloadBtn" class="download-btn" href="https://drive.google.com/uc?export=download&id=1zCr2vHfIRcaEpFkYpGeY1qSxSxNWGopI" target="_blank" rel="noopener noreferrer">
+                Télécharger l'APK
+            </a>
+
+            <div id="updatePanel" class="update-panel hidden" role="alert">
+                <h2>Nouvelle mise à jour disponible</h2>
+                <p id="updateMessage">Une nouvelle version du jeu est disponible. Télécharge-la pour obtenir les derniers correctifs et contenu.</p>
+                <a id="updateLink" class="download-btn secondary" href="https://drive.google.com/uc?export=download&id=1zCr2vHfIRcaEpFkYpGeY1qSxSxNWGopI" target="_blank" rel="noopener noreferrer">
+                    Mettre à jour maintenant
+                </a>
+            </div>
+        </main>
+
+        <section class="card secondary-card">
+            <div class="badge badge-alt">Fichier complet disponible</div>
+            <h2>Télécharge le fichier complet</h2>
+            <p>Obtiens l’archive complète du jeu et garde toutes les ressources nécessaires pour l’utiliser facilement.</p>
+
+            <div class="version-block">
+                <span id="pcVersionLabel">Version complète : 1.0.0</span>
+            </div>
+
+            <a id="pcDownloadBtn" class="download-btn secondary" href="https://drive.google.com/uc?export=download&id=1J3AGiijNwFVIv-4EpLBPR05121CPcxgR" target="_blank" rel="noopener noreferrer">
+                Télécharger le fichier complet PC
+            </a>
+
+            <div id="pcUpdatePanel" class="update-panel hidden" role="alert">
+                <h2>Nouvelle mise à jour disponible</h2>
+                <p id="pcUpdateMessage">Une nouvelle version du jeu PC est disponible. Télécharge la dernière version pour profiter des derniers contenus et correctifs.</p>
+                <a id="pcUpdateLink" class="download-btn secondary" href="https://drive.google.com/uc?export=download&id=1J3AGiijNwFVIv-4EpLBPR05121CPcxgR" target="_blank" rel="noopener noreferrer">
+                    Mettre à jour maintenant
+                </a>
+            </div>
+        </section>
+
+        <section class="card review-card">
+            <h2>Laisse ton avis</h2>
+            <p>Dis-nous ce que tu penses du jeu.</p>
+            <p class="review-note">Tu peux modifier ton avis à tout moment.</p>
+
+            <div class="review-summary">
+                <div id="averageStars" class="average-stars">Moyenne : 0.0 / 5</div>
+                <div id="reviewCount" class="review-count">0 avis</div>
+            </div>
+
+            <form id="reviewForm" class="review-form">
+                <label for="reviewName">Nom</label>
+                <input id="reviewName" type="text" placeholder="Ton nom" required />
+
+                <label for="reviewRating">Note</label>
+                <select id="reviewRating">
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+
+                <label for="reviewComment">Commentaire</label>
+                <textarea id="reviewComment" rows="4" placeholder="Écris ton avis ici..." required></textarea>
+
+                <button type="submit" class="download-btn">Envoyer l'avis</button>
+            </form>
+
+            <div id="reviewMessage" class="review-message" aria-live="polite"></div>
+            <div id="reviewList" class="review-list"></div>
+        </section>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js";
+      import { getFirestore, collection, addDoc, updateDoc, doc, getDocs, query, orderBy, where } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyBCsSKql4IJWWaR67CYSDY0V1ZRVW9E_38",
+        authDomain: "tomateweb.firebaseapp.com",
+        projectId: "tomateweb",
+        storageBucket: "tomateweb.firebasestorage.app",
+        messagingSenderId: "648100428530",
+        appId: "1:648100428530:web:30279a5a5140f8578bee6b",
+        measurementId: "G-9X1Q92QCMD"
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const db = getFirestore(app);
+      window.firebaseDb = db;
+      window.firebaseFirestore = {
+        collection,
+        addDoc,
+        updateDoc,
+        doc,
+        getDocs,
+        query,
+        orderBy,
+        where
+      };
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>

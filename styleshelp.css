@@ -1,0 +1,38 @@
+body
+{
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f8fafc;
+}
+
+.help
+{
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.alien
+{
+    position: absolute;
+    width: 300px;
+    height: 225px;
+    transform: translateY(-40%);
+    left: 800px;
+    top: 15%;
+}
+
+.boutonsh {
+  justify-content: center; /* centre horizontalement les boutons */
+  gap: 20px;
+  border: 2px solid #000000;
+  background-color: #94c0fa;
+  border-radius: 20px;
+  padding: 10px;
+  
+}
