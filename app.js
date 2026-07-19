@@ -2,8 +2,7 @@
 // Exemple : si tu publies une nouvelle version, mets 1.0.3, puis 1.0.4, 1.0.5, etc.
 const latestVersion = '1.0.1'; // Version de l'APK mobile
 const latestPcVersion = '1.0.1'; // Version du fichier complet PC
-const apkUrl = 'UltraGolf.apk';
-const pcFileUrl = 'UltraG.zip';
+const apkUrl = 'https://drive.google.com/uc?export=download&id=12ZzHykmn2wNlu-_79umMxXAZ-t0juR2k';
 const installedVersionKey = 'installedVersion';
 const lastSeenVersionKey = 'lastSeenVersion';
 const pcInstalledVersionKey = 'pcInstalledVersion';
@@ -313,7 +312,7 @@ function showUpdateNotice() {
   if (updateMessage) {
     updateMessage.textContent = `Une nouvelle mise à jour (${latestVersion}) est disponible. Téléchargez la dernière version pour profiter des nouveaux contenus et correctifs.`;
   }
-  if (updateLink) {
+  if (updateLink && !updateLink.getAttribute('data-custom-url')) {
     updateLink.href = apkUrl;
   }
 }
@@ -370,11 +369,11 @@ function checkForPcUpdate() {
   }
 }
 
-if (downloadBtn) {
+if (downloadBtn && !downloadBtn.getAttribute('data-custom-url')) {
   downloadBtn.href = apkUrl;
 }
 
-if (updateLink) {
+if (updateLink && !updateLink.getAttribute('data-custom-url')) {
   updateLink.href = apkUrl;
 }
 
